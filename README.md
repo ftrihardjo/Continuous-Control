@@ -33,7 +33,7 @@ Windows (32-bit): [click here](https://s3-us-west-1.amazonaws.com/udacity-drlnd/
     
 Windows (64-bit): [click here](https://s3-us-west-1.amazonaws.com/udacity-drlnd/P2/Reacher/Reacher_Windows_x86_64.zip)
 
-Then run third cell to import the necessary packages, fourth cell to create an agent and an environment, fifth cell to train the agent and sixth cell to test the agent.
+Then run second cell to import the necessary packages, third cell to create an agent and an environment, fourth cell to train the agent and fifth cell to test the agent.
 
 ### Implementation
 The agent is initialised with state size and action size in agent.py. The neural networks architecture used by the agent can be found in model.py. The goal is to estimate the optimal policy that maximizes the average cumulative rewards. Deep deterministic policy gradient algorithm is used as it can handle continuous action space. The agent uses a target and a local neural network for both actor and critic.
