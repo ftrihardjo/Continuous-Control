@@ -4,7 +4,7 @@ For this project, an agent, a double-jointed arm was trained to maintain its pos
 
 A reward of +0.1 is provided for each step that the agent's hand is in the goal location. The goal was to get an average score of +30 over 100 consecutive episodes.
 
-The observation space consists of 33 variables corresponding to position, rotation, velocity, and angular velocities of the arm. Each action is a vector with four numbers, corresponding to torque applicable to two joints. The results are for environment version two with twenty agents.
+The observation space consists of 33 variables corresponding to position, rotation, velocity, and angular velocities of the arm. Each action is a vector with four numbers, corresponding to torque applicable to two joints where each element of the vector is between -1 and 1. The results are for environment version two with twenty agents.
 
 Install the following packages using pip:
 ```
