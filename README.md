@@ -38,9 +38,9 @@ Then run second cell to import the necessary packages, third cell to create an a
 ### Implementation
 The agent is initialised with state size and action size in agent.py. The neural networks architecture used by the agent can be found in model.py. The goal is to estimate the optimal policy that maximizes the average cumulative rewards. Deep deterministic policy gradient algorithm is used as it can handle continuous action space. The agent uses a target and a local neural network for both actor and critic.
 
-The actor neural network consists of one hidden layers with 256 nodes. The hidden layer has a ReLU activation function and the output layer is followed by a tanh function. The neural network takes a state as an input and outputs the best possible action in the corresponding state.
+The actor neural network consists of one hidden layers with 256 nodes. The hidden layer has a ReLU activation function and the output layer is followed by a tanh function. The neural network takes a state as an input and outputs an action-value function for corresponding state.
 
-The critic neural network consists of three hidden layers with 256 + action_size, 256 and 128 nodes respectively. All hidden layers have a ReLU activation function. The neural network takes a state as an input and outputs an action-value function based on the best action calculated by the actor.
+The critic neural network consists of three hidden layers with 256 + action_size, 256 and 128 nodes respectively. All hidden layers have a ReLU activation function. The neural network takes state and action from buffer as an input and outputs based on action-value function calculated by the actor.
 
 ### Training
 Agent takes a state as an input and outputs an action for this state. Then agent takes the next step, saves the observed experience in replay memory and once the agent has enough samples available in memory, it gets a random subset and starts to learn from that batch.
